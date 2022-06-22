@@ -1,0 +1,188 @@
+/*--------------------
+File: Stylesheet
+Project: NZ Website
+Author: Daniel Lagesse
+Date: 2022-06-21
+----------------------*/
+/*---- Body ----*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    background-image: url(../images/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*----- Images ----*/
+
+img.header {
+    width: 100%;
+    height: auto; 
+    z-index: 0;
+}
+
+img.images {
+    display: block;
+    margin: auto;
+    transform-origin: center;
+    box-shadow: 0 3px 8px black;
+    transition: 0.3s ease all;
+}
+
+img.images:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+/*---- Headers ----*/
+header {
+    height: 300px;
+    z-index: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+
+/*---- Fonts ----*/
+p {
+    font-family: sans-serif;
+}
+
+ul li {
+    font-family: sans-serif;
+}
+
+/*---- Navigation Bar ----*/
+nav {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    background-color: rgb(86, 189, 207);
+    z-index: 99;
+}
+
+nav ul {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 25px 50px;
+    transition: 0.3s ease all;
+}
+
+nav ul li a.active {
+    background-color: rgba(107, 230, 252, 0.5);
+    color: black;
+    transition: 0.3s ease all;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+    transition: 0.3s ease all;
+}
+
+nav ul li a.active:hover {
+    cursor: default;
+}
+
+/*---- Sections & articles ----*/
+div.content {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    z-index: 5;
+    background-color: white;
+}
+
+section {
+    display: block;
+    margin: auto;
+    width: 60%;
+    background-color: white;
+}
+
+/*---- Footer ----*/
+footer {
+    display: block;
+}
+
+footer p {
+    text-align: center;
+    background-color: white;
+}
+
+/*---- Modal Images ----*/
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-size: 20pt;
+    color: white;
+    z-index: 100;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .modalContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalImg {
+    width: 75%;
+    max-width: 1280px;
+  }
+  
+  .modalImg:hover {
+    cursor: pointer;
+  }
+  
+  .modalText {
+    margin-top: 1em;
+  }
+  
+  .modal.appear {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .modal.appear .modalImg {
+    animation: zoom 0.2s linear;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    } to {
+      transform: scale(1);
+    }
+  }
