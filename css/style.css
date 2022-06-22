@@ -149,40 +149,40 @@ footer p {
     pointer-events: none;
   }
   
-  .modalContent {
+.modalContent {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modalImg {
+}
+
+.modalImg {
     width: 75%;
     max-width: 1280px;
-  }
-  
-  .modalImg:hover {
+}
+
+.modalImg:hover {
     cursor: pointer;
-  }
-  
-  .modalText {
+}
+
+.modalText {
     margin-top: 1em;
-  }
-  
-  .modal.appear {
+}
+
+.modal.appear {
     opacity: 1;
     pointer-events: all;
-  }
-  
-  .modal.appear .modalImg {
-    animation: zoom 0.2s linear;
-  }
+}
 
-  @keyframes zoom {
-    from {
-      transform: scale(0);
-    } to {
-      transform: scale(1);
-    }
-  }
+.modal.appear .modalImg {
+    animation: zoom 0.2s linear;
+}
+
+@keyframes zoom {
+from {
+    transform: scale(0);
+} to {
+    transform: scale(1);
+}
+}
