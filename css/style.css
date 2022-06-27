@@ -20,7 +20,7 @@ html {
 
 /*----- Images ----*/
 
-img.header {
+a.header {
     display: block;
     margin: auto;
     z-index: 0;
@@ -222,7 +222,7 @@ footer p {
     }
 
     /* logo */
-    img.header {
+    a.header {
         display: none;
     }
 }
